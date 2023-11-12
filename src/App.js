@@ -8,6 +8,7 @@ function App() {
         <Route path='/' element= {<AppLayout/>} />
         <Route path='fact' element= {<Fact/>} />
         <Route path='activity' element= {<Activity/>} />
+        <Route path='dog' element= {<DogPic />} />
       </Routes>
     </BrowserRouter>
   );
