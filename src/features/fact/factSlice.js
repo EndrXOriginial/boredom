@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import {v4 as key} from 'uuid';
 
 export const factSlice = createSlice({
     name: 'facts',
@@ -8,12 +9,12 @@ export const factSlice = createSlice({
     reducers: {
         addFavorite: (state, action) => {
             const {fact} = action.payload;
-            const key = state.favorites.length;
-            state.favorites[key] = {fact: fact}
+            const id = key();
+            state.favorites[id] = {fact: fact};
         },
         removeFavorite: (state, action) => {
-            const {key} = action.payload;
-            state.favorites.filter(fav => fav !== key);
+            const {id} = action.payload;
+            state.favorites.filter(fav => fav !== id);
         }
     }
 });
