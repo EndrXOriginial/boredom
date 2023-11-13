@@ -5,7 +5,9 @@ export default function Header() {
     return (
         <div>
             <nav className="nav-header">
-                <h1 className="title-page">Boredom</h1>
+                <NavLink to={'/'}>
+                    <h1 className="title-page">Boredom</h1>
+                </NavLink>
             </nav>
         </div>
     )
